@@ -1,0 +1,20 @@
+Como usar (exemplos):
+
+POST /api/v1/accounts/register/ com { "email", "password", "first_name" } → cria usuário.
+
+POST /api/v1/accounts/token/ com { "email", "password" } → retorna access e refresh.
+
+Coloque header Authorization: Bearer <access> para acessar GET /api/v1/accounts/me/.
+
+testando 
+curl -X POST http://127.0.0.1:8000/api/v1/accounts/register/ \
+  -H "Content-Type: application/json" \
+  -d '{"email":"teste@ex.com","password":"SenhaComplexa123","first_name":"Adriano"}'
+
+  Testar endpoints no Postman ou Swagger:
+
+/api/v1/catalog/categories/
+
+/api/v1/catalog/products/
+
+Integrar com React + Axios, consumindo /api/v1/catalog/products/ e /api/v1/catalog/categories/.
