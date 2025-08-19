@@ -17,7 +17,7 @@ O sistema possui autenticação de usuários, gerenciamento de produtos, carrinh
 - React
 - Vite
 - Axios (requisições HTTP)
-- TailwindCSS (estilização)
+- Sass/Scss (estilização)
 
 ---
 
