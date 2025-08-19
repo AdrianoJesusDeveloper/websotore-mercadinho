@@ -1,21 +1,29 @@
-# Webstore Mercadinho - Backend
+# 🛒 Webstore Mercadinho
 
-Este é o backend do projeto **Webstore Mercadinho**, desenvolvido em **Django** para gerenciar carrinho de compras, produtos, usuários e pedidos.
+Projeto de e-commerce simples desenvolvido com **Django (backend)** e **React (frontend)**.  
+O sistema possui autenticação de usuários, gerenciamento de produtos, carrinho de compras e pedidos.
 
 ---
 
 ## 🚀 Tecnologias Utilizadas
-- **Python 3**
-- **Django**
-- **Django REST Framework**
-- **SQLite3** (padrão, pode ser substituído por PostgreSQL ou MySQL)
-- **dotenv** para variáveis de ambiente
+
+### Backend
+- Python 3
+- Django & Django REST Framework
+- SQLite (padrão, mas pode ser configurado para PostgreSQL/MySQL)
+- Django Environ (variáveis de ambiente)
+
+### Frontend
+- React
+- Vite
+- Axios (requisições HTTP)
+- TailwindCSS (estilização)
 
 ---
 
 ## 📂 Estrutura do Projeto
 
-```
+```bash
 backend/
 │── manage.py
 │── requirements.txt
@@ -25,23 +33,29 @@ backend/
 │── products/             # App responsável pelos produtos
 │── users/                # App de autenticação e usuários
 │── orders/               # App de pedidos
+
+frontend/                 # Aplicação React (interface do usuário)
+│── src/                  # Código principal do frontend
+│── package.json
+│── vite.config.js
 ```
 
 ---
 
-## ⚙️ Configuração do Ambiente
+## ⚙️ Como Rodar o Projeto
 
-1. Clone este repositório:
+### 🔹 Backend (Django)
+
+1. Clone o repositório e entre na pasta do backend:
    ```bash
-   git clone https://github.com/seu-usuario/webstore-mercadinho.git
-   cd webstore-mercadinho/backend
+   cd backend
    ```
 
-2. Crie e ative o ambiente virtual:
+2. Crie o ambiente virtual:
    ```bash
    python -m venv venv
-   source venv/bin/activate   # Linux/Mac
-   venv\Scripts\activate    # Windows
+   source venv/bin/activate  # Linux/Mac
+   venv\Scripts\activate   # Windows
    ```
 
 3. Instale as dependências:
@@ -49,45 +63,64 @@ backend/
    pip install -r requirements.txt
    ```
 
-4. Configure o arquivo `.env` com as variáveis necessárias:
+4. Configure o arquivo `.env` (exemplo abaixo):
    ```env
-   SECRET_KEY=sua_chave_secreta
+   SECRET_KEY=suachavesecreta
    DEBUG=True
    DATABASE_URL=sqlite:///db.sqlite3
    ```
 
-5. Aplique as migrações:
+5. Rode as migrações e inicie o servidor:
    ```bash
    python manage.py migrate
-   ```
-
-6. Crie um superusuário para acessar o Django Admin:
-   ```bash
-   python manage.py createsuperuser
-   ```
-
-7. Inicie o servidor:
-   ```bash
    python manage.py runserver
    ```
 
 ---
 
-## 📌 Endpoints Principais
+### 🔹 Frontend (React)
 
-- `/api/products/` → Listagem e gestão de produtos
-- `/api/cart/` → Operações do carrinho de compras
-- `/api/orders/` → Gestão de pedidos
-- `/api/users/` → Autenticação e gerenciamento de usuários
+1. Acesse a pasta do frontend:
+   ```bash
+   cd frontend
+   ```
+
+2. Instale as dependências:
+   ```bash
+   npm install
+   ```
+
+3. Inicie o servidor de desenvolvimento:
+   ```bash
+   npm run dev
+   ```
 
 ---
 
-## ✅ Próximos Passos
-- Implementar autenticação com JWT
-- Adicionar testes unitários
-- Configurar deploy em produção (Render, Railway, ou AWS)
+## 📌 Funcionalidades
+
+✅ Cadastro e autenticação de usuários  
+✅ Listagem e gerenciamento de produtos  
+✅ Carrinho de compras persistente  
+✅ Criação e gerenciamento de pedidos  
+✅ Integração entre frontend e backend via API REST  
 
 ---
 
-## 👨‍💻 Autor
-Projeto desenvolvido por **Adriano Jesus** como parte do estudo em **Django + APIs REST**.
+## 🤝 Contribuição
+
+1. Faça um fork do projeto
+2. Crie uma branch para sua feature (`git checkout -b minha-feature`)
+3. Commit suas alterações (`git commit -m 'Adicionei nova feature'`)
+4. Faça o push para a branch (`git push origin minha-feature`)
+5. Abra um Pull Request
+
+---
+
+## 📄 Licença
+
+Este projeto está sob a licença MIT - veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+
+---
+
+👨‍💻 Desenvolvido por Adriano Jesus 🚀
